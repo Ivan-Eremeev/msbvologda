@@ -1,0 +1,46 @@
+/* settings */
+.mobile-hide {
+  @media (max-width: $break_xs) {
+    display: none !important;
+  }
+}
+.mobile-visible {
+  @media (min-width: $break_xs + 1) {
+    display: none !important;
+  }
+}
+.tablet-hide {
+  @media (max-width: $break_sm) {
+    display: none !important;
+  }
+}
+
+.tablet-visible {
+  @media (min-width: $break_sm + 1) {
+    display: none !important;
+  }
+}
+.row-grid {
+  @include row();
+}
+.wrapper-grid {
+  @include wrapper();
+  @media (max-width: $break_md) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.navpage {
+  padding: 100px 0;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  ul {
+    font-size: 18px;
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+/* /settings */

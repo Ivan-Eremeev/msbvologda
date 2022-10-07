@@ -1,0 +1,68 @@
+extends core/base.pug
+
+block title 
+  title Лендинг
+
+block content
+
+  // welcome-slider
+  .welcome-slider 
+    .wrapper-grid 
+      img(src="img/welcome-slider.jpg", alt="")
+  // /welcome-slider
+
+  // steps-eiv
+  .steps-eiv
+    .wrapper-grid 
+      .steps-eiv__container 
+        .steps-eiv__video
+          video(playsinline loop muted preload="auto").js-video
+            source(src="video/video.mp4" type="video/mp4")
+        .steps-eiv__content 
+          .steps-eiv__title О центре
+            .steps-eiv__section-num 01
+          .steps-eiv__text Муниципальное бюджетное учреждение «Центр содействия развитию предпринимательства и туризма» - некоммерческая организация, созданная по инициативе Администрации г. Вологды в 2011 году в целях содействия развитию малого и среднего предпринимательства ...
+          .steps-eiv__lists 
+            ul.steps-eiv__list 
+              li 
+                a(href="#") Партнеры
+              li 
+                a(href="#") Наша команда
+              li 
+                a(href="#") Отзывы
+            ul.steps-eiv__list 
+              li 
+                a(href="#") Реквизиты
+              li 
+                a(href="#") Вакансии
+              li 
+                a(href="#") Документы
+  // /steps-eiv
+
+  // steps-eiv over
+  .steps-eiv.steps-eiv--over 
+    .wrapper-grid 
+      .steps-eiv__container 
+        .steps-eiv__content 
+          .steps-eiv__title Поддержка бизнеса
+            .steps-eiv__section-num 02
+          .steps-eiv__text Поддержка малого бизнеса: какие виды поддержки и на каких условиях можно получить. В мерах помощи бизнесу в нынешних непростых условиях сложно разобраться. Чтобы не пропустить льготу или субсидию, которая подойдёт конкретному малому бизнесу, теперь не нужно мониторить новости каждый день, мы собрали все в одном разделе.
+          .steps-eiv__lists 
+            ul.steps-eiv__list 
+              li 
+                a(href="#") Малый бизнес
+              li 
+                a(href="#") Самозанятые
+              li 
+                a(href="#") Субсидии
+            ul.steps-eiv__list 
+              li 
+                a(href="#") Промышленные предприятия
+              li 
+                a(href="#") Социальные предприятия
+              li 
+                a(href="#") Документы
+        .steps-eiv__video
+          video(playsinline loop muted preload="auto").js-video
+            source(src="video/video.mp4" type="video/mp4")
+  // /steps-eiv over
