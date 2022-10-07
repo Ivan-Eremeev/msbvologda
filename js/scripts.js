@@ -253,19 +253,32 @@ window.onload = function () {
   //   });
   // };
 
+  // Проигрывание видео в зоне видимости
   function videoScrollPlay() {
     let video = document.querySelectorAll('.js-video');
-    function videoPlay() {
-      video.forEach(function (currentVideo) {
-        if ((window.scrollY + window.innerHeight - 200) > currentVideo.offsetTop) {
-          currentVideo.play();
-        }
-      })
-    }
-    videoPlay();
-    window.addEventListener('scroll', () => {
-      videoPlay();
+    video.forEach(function (currentVideo) {
+      let noRepeat;
+      videoPlayVisible(currentVideo);
+      window.addEventListener('scroll', () => {
+        videoPlayVisible(currentVideo);
+      });
     });
+    function videoPlayVisible(target) {
+      let targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+        bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+      },
+      windowPosition = {
+        top: window.pageYOffset,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+      };
+      if (targetPosition.bottom > windowPosition.top + 100 &&
+        targetPosition.top < windowPosition.bottom - 200) {
+        target.play();
+      } else {
+        target.pause();
+      };
+    };
   }
   videoScrollPlay();
 
