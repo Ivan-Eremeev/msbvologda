@@ -257,7 +257,7 @@ window.onload = function () {
     let video = document.querySelectorAll('.js-video');
     function videoPlay() {
       video.forEach(function (currentVideo) {
-        if ((window.scrollY + window.innerHeight - 400) > currentVideo.offsetTop) {
+        if ((window.scrollY + window.innerHeight - 200) > currentVideo.offsetTop) {
           currentVideo.play();
         }
       })

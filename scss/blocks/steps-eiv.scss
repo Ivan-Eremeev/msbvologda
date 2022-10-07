@@ -6,13 +6,12 @@
   color: $black;
   &__container {
     display: flex;
-    align-items: center;
     > * {
       &:nth-child(1) {
-        padding-right: 10px;
+        padding-right: 15px;
       }
       &:nth-child(2) {
-        padding-left: 10px;
+        padding-left: 15px;
       }
     }
   }
@@ -28,7 +27,7 @@
   &__title {
     font-weight: 500;
     font-size: 64px;
-    line-height: 80px;
+    line-height: 120%;
     position: relative;
     margin-bottom: 35px;
   }
@@ -72,6 +71,77 @@
   }
   &--over {
     
+  }
+  @media (max-width: $break_lg) {
+    &__title {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    &__section-num {
+      font-size: 16px;
+      bottom: calc(100% - 10px);
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__lists {
+      font-size: 20px;
+    }
+    &__list {
+      li {
+        margin: 20px 0;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding: 50px 0;
+    &__container {
+      flex-wrap: wrap;
+      > * {
+        &:nth-child(1) {
+          padding-right: 0;
+        }
+        &:nth-child(2) {
+          padding-left: 0;
+        }
+      }
+    }
+    &__video {
+      width: 100%;
+    }
+    &__content {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__section-num {
+      right: calc(100% - 10px);
+    }
+    &--over {
+      .steps-eiv__video {
+        order: 1;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 32px;
+    }
+    &__lists {
+      flex-wrap: wrap;
+    }
+    &__list {
+      width: 100%;
+      &:nth-child(1) {
+        margin-right: 0;
+      }
+      li {
+        margin: 0;
+        a {
+          display: block;
+          padding: 10px 0;
+        }
+      }
+    }
   }
 }
 /* /steps-eiv */
