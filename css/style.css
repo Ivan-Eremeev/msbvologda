@@ -87,13 +87,13 @@ h1, h2, h3 {
   src: url("../fonts/tektur/tektur_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/tektur/tektur_bold.woff") format("woff"), url("../fonts/tektur/tektur_bold.woff2") format("woff2"), url("../fonts/tektur/tektur_bold.ttf") format("truetype"), url("../fonts/tektur/tektur_bold.svg") format("svg");
 }
 /* settings */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .mobile-hide {
     display: none !important;
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 601px) {
   .mobile-visible {
     display: none !important;
   }
@@ -309,7 +309,7 @@ h1, h2, h3 {
     order: 1;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .steps-eiv__title {
     font-size: 32px;
   }
@@ -333,3 +333,160 @@ h1, h2, h3 {
 }
 
 /* /steps-eiv */
+/* page-header */
+.page-header {
+  padding: 24px 0 40px;
+  font-family: "Tektur", sans-serif;
+  color: #000;
+}
+.page-header__title {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.page-header__breadcrumbs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 2.2;
+  color: #999;
+}
+.page-header__breadcrumbs ul li:not(:last-child) {
+  margin-right: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+.page-header__breadcrumbs ul li:not(:last-child):after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 8px;
+  right: -5px;
+}
+.page-header__breadcrumbs ul li a {
+  color: #999;
+  text-decoration: none;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.page-header__breadcrumbs ul li a:hover {
+  color: #444DA0;
+}
+@media (max-width: 1365px) {
+  .page-header__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .page-header__title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .page-header__title {
+    font-size: 27px;
+  }
+}
+
+/* /page-header */
+/* page-nav */
+.page-nav {
+  padding-bottom: 80px;
+  font-family: "Tektur", sans-serif;
+  color: #000;
+}
+.page-nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.page-nav__sidebar {
+  width: 300px;
+  margin-right: 48px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.page-nav__link {
+  display: block;
+  padding: 15px 50px 15px 20px;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.page-nav__link--bold {
+  font-weight: bold;
+  position: relative;
+}
+.page-nav__link--bold:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+  top: 24px;
+  left: 0;
+}
+.page-nav__link:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+}
+.page-nav__link:hover {
+  color: #444DA0;
+}
+.page-nav__main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.page-nav__item {
+  padding: 40px 0;
+}
+.page-nav__item:first-child {
+  padding-top: 0;
+}
+.page-nav__item:last-child {
+  padding-bottom: 0;
+}
+.page-nav__item:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+.page-nav__item span {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 7px;
+}
+.page-nav__item a {
+  font-size: 21px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.page-nav__item a:hover {
+  color: #636161;
+}
+@media (max-width: 1365px) {
+  .page-nav__item a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .page-nav__sidebar {
+    display: none;
+  }
+}
+
+/* /page-nav */

@@ -1,0 +1,43 @@
+extends core/base.pug
+
+block title 
+  title Навигаця по страницам
+
+block content
+
+  // page-header
+  .page-header
+    .wrapper-grid 
+      .page-header__title Федеральные меры поддержки в условиях санкций
+      .page-header__breadcrumbs 
+        ul 
+          li 
+            a(href="#") Главная
+          li 
+            a(href="#") Поддержка бизнеса
+          li 
+            span Федеральные меры поддержки в условиях санкций
+  // /page-header
+
+  // page-nav
+  .page-nav
+    .wrapper-grid 
+      .page-nav__container 
+        .page-nav__sidebar 
+          a(href="#").page-nav__link.page-nav__link--bold Малый бизнес
+          a(href="#").page-nav__link Промышленные предприятия
+          a(href="#").page-nav__link Самозанятые
+          a(href="#").page-nav__link Социальные предприятия
+          a(href="#").page-nav__link Субсидии на трудоустройство
+          a(href="#").page-nav__link.page-nav__link--bold Федеральные меры поддержки в условиях санкций
+        .page-nav__main 
+          .page-nav__item 
+            span инструкция
+            a(href="#") ИП или ООО: что выбрать?
+          .page-nav__item 
+            span инструкция
+            a(href="#") Кто может стать самозанятым
+          .page-nav__item 
+            span инструкция
+            a(href="#") Какие формы бизнеса подходят для <br>ремесленников
+  // /page-nav
