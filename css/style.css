@@ -229,12 +229,13 @@ h1, h2, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  margin-left: -50px;
   font-weight: 500;
   font-size: 26px;
   line-height: 150%;
+}
+.steps-eiv__list {
+  padding-left: 50px;
 }
 .steps-eiv__list:nth-child(1) {
   margin-right: 20px;
@@ -248,13 +249,7 @@ h1, h2, h3 {
   text-decoration: none;
 }
 .steps-eiv__list li a:hover {
-  color: #636161;
-}
-.steps-eiv--end .steps-eiv__content {
-  width: 65%;
-}
-.steps-eiv--end .steps-eiv__video {
-  width: 35%;
+  color: #fc031c;
 }
 @media (max-width: 1200px) {
   .steps-eiv__title {
