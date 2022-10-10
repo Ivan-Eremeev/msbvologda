@@ -253,33 +253,30 @@ window.onload = function () {
   //   });
   // };
 
-  // Проигрывание видео в зоне видимости
-  function videoScrollPlay() {
-    let video = document.querySelectorAll('.js-video');
-    video.forEach(function (currentVideo) {
-      let noRepeat;
-      videoPlayVisible(currentVideo);
-      window.addEventListener('scroll', () => {
-        videoPlayVisible(currentVideo);
+  // Ленивая загрузка видео
+  function lazyVideo() {
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+    if ("IntersectionObserver" in window) {
+      var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (video) {
+          if (video.isIntersecting) {
+            for (var source in video.target.children) {
+              var videoSource = video.target.children[source];
+              if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                videoSource.src = videoSource.dataset.src;
+              }
+            }
+            video.target.load();
+            video.target.classList.remove("lazy");
+            lazyVideoObserver.unobserve(video.target);
+          }
+        });
       });
-    });
-    function videoPlayVisible(target) {
-      let targetPosition = {
-        top: window.pageYOffset + target.getBoundingClientRect().top,
-        bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-      },
-      windowPosition = {
-        top: window.pageYOffset,
-        bottom: window.pageYOffset + document.documentElement.clientHeight
-      };
-      if (targetPosition.bottom > windowPosition.top + 100 &&
-        targetPosition.top < windowPosition.bottom - 200) {
-        target.play();
-      } else {
-        target.pause();
-      };
-    };
+      lazyVideos.forEach(function (lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
+      });
+    }
   }
-  videoScrollPlay();
+  lazyVideo();
 
 }
