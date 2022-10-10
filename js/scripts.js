@@ -271,7 +271,11 @@ window.onload = function () {
             lazyVideoObserver.unobserve(video.target);
           }
         });
-      });
+      },
+        {
+          threshold: 0.7,
+        }
+      );
       lazyVideos.forEach(function (lazyVideo) {
         lazyVideoObserver.observe(lazyVideo);
       });
