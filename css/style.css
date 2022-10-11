@@ -200,6 +200,9 @@ h1, h2, h3 {
 .steps-eiv__video video {
   width: 100%;
 }
+.steps-eiv__video img {
+  width: 100%;
+}
 .steps-eiv__content {
   width: 50%;
 }
