@@ -273,7 +273,7 @@ window.onload = function () {
         });
       },
         {
-          threshold: 0.7,
+          threshold: 1,
         }
       );
       lazyVideos.forEach(function (lazyVideo) {
