@@ -96,6 +96,7 @@
     font-size: 12px;
   }
   &__bottom-item {
+    margin: 8px 0;
     text-decoration: none;
     color: #fff;
     span {
@@ -103,6 +104,48 @@
     }
     &:nth-child(1) {
       margin-right: 400px;
+    }
+  }
+  @media (max-width: $break_lg) {
+    &__top {
+      flex-wrap: wrap;
+    }
+    &__sidebar {
+      width: 100%;
+    }
+  }
+  @media (max-width: $break_md) {
+    &__bottom-item {
+      &:nth-child(1) {
+        margin-right: 100px;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__top {
+      padding: 16px 0 0;
+    }
+    &__nav {
+      ul {
+        display: block;
+        font-size: 12px;
+        li {
+          width: 100%;
+          margin: 16px 0;
+        }
+      }
+    }
+    &__item {
+      font-size: 10px;
+    }
+    &__bottom {
+      padding: 16px 0 40px;
+      font-size: 10px;
+    }
+    &__bottom-item {
+      &:nth-child(1) {
+        margin-right: 40px;
+      }
     }
   }
 }
