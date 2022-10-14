@@ -2,7 +2,9 @@
 header.header-eiv
   .wrapper-grid  
     .header-eiv__container 
-      .header-eiv__burger.js-drop-menu(data-drop="menu")
+      .header-eiv__burger.header-eiv__burger--desktop.js-drop-menu(data-drop="menu")
+        .header-eiv__burger-inner 
+      .header-eiv__burger.header-eiv__burger--mobile.js-drop-menu(data-drop="menuMobile")
         .header-eiv__burger-inner 
       a(href="#").header-eiv__logo 
         img(src="img/logo.png", alt="")
@@ -36,7 +38,7 @@ header.header-eiv
         .header-eiv__icon 
           svg(class="icon-user")
             use(xlink:href="img/sprite.svg#user")
-        .header-eiv__btn Подать заявку
+        .header-eiv__btn.tablet-hide Подать заявку
 
 .header-eiv__bmenu#menu
   .wrapper-grid
