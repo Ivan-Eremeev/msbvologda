@@ -1,4 +1,9 @@
 /* settings */
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
 .mobile-hide {
   @media (max-width: $break_xs) {
     display: none !important;
@@ -22,6 +27,12 @@
 }
 .row-grid {
   @include row();
+  &.gy {
+    margin-top: $gutter * -1;
+    > * {
+      padding-top: $gutter;
+    }
+  }
 }
 .wrapper-grid {
   @include wrapper();
@@ -34,6 +45,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 80px;
 }
 .content-eiv {
   flex-grow: 1;

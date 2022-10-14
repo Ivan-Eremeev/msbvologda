@@ -30,4 +30,55 @@ window.onload = function () {
   }
   lazyVideo();
 
+  // Выпадайки при клике по кнопке
+	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
+	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
+	function dropBlock(btn, lock = false) {
+		let $this = undefined,
+				drop = undefined,
+				close = $('.js-drop-close'),
+        body = $('body'),
+        header = $('.header-eiv');
+		btn.on('click', function () {
+			$this = $(this);
+			drop = $('#' + $this.data('drop'));
+      let scrollWidth = (window.innerWidth - $(window).width());
+      if (!$this.hasClass('is-active')) {
+        $this.addClass('is-active');
+        drop.addClass('open');
+        if (lock) {
+          body.toggleClass('lock');
+          body.css('padding-right', scrollWidth);
+          header.css('padding-right', scrollWidth);
+        }
+      } else {
+        $this.removeClass('is-active');
+        drop.removeClass('open');
+        body.removeClass('lock');
+        body.css('padding-right', 0);
+        header.css('padding-right', 0);
+      }
+			$(document).mouseup(function (e) {
+				if (!$this.is(e.target)
+					&& $this.has(e.target).length === 0
+					&& !drop.is(e.target)
+					&& drop.has(e.target).length === 0) {
+					$this.removeClass('is-active');
+					drop.removeClass('open');
+          body.removeClass('lock');
+          body.css('padding-right', 0);
+          header.css('padding-right', 0);
+				}
+			});
+		})
+		close.on('click', function () {
+			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
+			$('#' + $(this).data('drop')).removeClass('open');
+      body.removeClass('lock');
+      body.css('padding-right', 0);
+		})
+	}
+  dropBlock($('.js-drop-btn'));
+  dropBlock($('.js-drop-menu'), true);
+
 }

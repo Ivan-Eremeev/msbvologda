@@ -16,8 +16,8 @@
     align-items: center;
   }
   &__burger {
-    width: 48px;
-    height: 48px;
+    width: 35px;
+    height: 35px;
     flex-shrink: 0;
     margin-right: 90px;
     position: relative;
@@ -25,8 +25,7 @@
     user-select: none;
     &:hover {
       .header-eiv__burger-inner {
-        background-color: $blue;
-        &:after {
+        &:after, &:before {
           background-color: $blue;
         }
       }
@@ -35,12 +34,21 @@
   &__burger-inner {
     width: 40%;
     height: 2px;
-    background-color: $black;
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 50%;
-    transform: translate(-50%,-5px);
-    transition: 0.1s;
+    transform: translate(0,-50%);
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      position: absolute;
+      top: -3px;
+      left: 0;
+      transition: 0.3s;
+    }
     &:after {
       content: '';
       display: block;
@@ -48,9 +56,9 @@
       height: 2px;
       background-color: $black;
       position: absolute;
-      top: 5px;
+      top: 3px;
       left: 0;
-      transition: 0.1s;
+      transition: 0.3s;
     }
   }
   &__logo {
@@ -128,6 +136,77 @@
     outline: none;
     cursor: pointer;
     user-select: none;
+  }
+  &__bmenu {
+    height: 100vh;
+    padding-top: 120px;
+    background-color: #fff;
+    font-family: "Tektur", sans-serif;
+    color: $black;
+    position: fixed;
+    top: -2000px;
+    left: 0;
+    right: 0;
+    transition: .5s;
+    z-index: 9;
+    overflow-y: auto;
+    &.open {
+      top: 0;
+    }
+  }
+  &__bmenu-head {
+    border-bottom: 1px solid $black;
+    padding-bottom: 50px;
+  }
+  &__bmenu-col {
+    @include col(3);
+    @include col-lg(4);
+    @include col-sm(12);
+  }
+  &__bmenu-title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &__bmenu-subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__bmenu-body {
+    padding: 30px 0;
+  }
+  &__bmenu-list {
+    font-size: 14px;
+    margin-bottom: 40px;
+    li {
+      margin-bottom: 6px;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+  @media (min-width: $break_sm + 1) {
+    &__burger {
+      &.is-active {
+        .header-eiv__burger-inner {
+          &:after {
+            width: 100%;
+            top: 0;
+            transform: rotate(45deg);
+          }
+          &:before {
+            top: 0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__bmenu {
+      display: none;
+    }
   }
 }
 /* /header-eiv */
