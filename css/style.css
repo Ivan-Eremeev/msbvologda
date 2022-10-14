@@ -441,6 +441,11 @@ body.lock {
     display: block;
   }
 }
+@media (max-width: 1550px) {
+  .header-eiv__burger {
+    margin-right: 20px;
+  }
+}
 @media (min-width: 769px) {
   .header-eiv__burger:hover .header-eiv__burger-inner:after, .header-eiv__burger:hover .header-eiv__burger-inner:before {
     background-color: #444DA0;

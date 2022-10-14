@@ -199,6 +199,11 @@
       }
     }
   }
+  @media (max-width: 1550px) {
+    &__burger {
+      margin-right: 20px;
+    }
+  }
   @media (min-width: $break_sm + 1) {
     &__burger {
       &:hover {
