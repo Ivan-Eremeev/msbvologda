@@ -267,6 +267,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   font-size: 11px;
   line-height: 19px;
+  font-weight: bold;
 }
 .header-eiv__menu ul {
   display: -webkit-box;
@@ -282,12 +283,15 @@ h1, h2, h3 {
   margin: 0 28px;
 }
 .header-eiv__menu ul li a {
-  font-weight: 500;
   color: #000;
   text-decoration: none;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
 }
 .header-eiv__menu ul li a:hover {
   color: #444DA0;
+  fill: #444DA0;
 }
 .header-eiv__points {
   -ms-flex-negative: 0;
@@ -311,11 +315,22 @@ h1, h2, h3 {
   flex-shrink: 0;
   padding: 0 24px;
   fill: #888;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
 }
 .header-eiv__icon svg {
   display: block;
   max-width: 19px;
   max-height: 19px;
+}
+.header-eiv__icon:hover {
+  fill: #444DA0;
 }
 .header-eiv__btn {
   padding: 11px 20px;
