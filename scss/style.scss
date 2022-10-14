@@ -25,10 +25,13 @@ $break_xs: 600px;
 // Цвета
 $black: #000;
 $gray: #636161;
+$blue: #444DA0;
 
 // Подключение файлов
 @import 'blocks/settings';
+@import 'blocks/header-eiv';
 @import 'blocks/welcome-slider';
 @import 'blocks/steps-eiv';
 @import 'blocks/page-header';
 @import 'blocks/page-nav';
+@import 'blocks/footer-eiv';

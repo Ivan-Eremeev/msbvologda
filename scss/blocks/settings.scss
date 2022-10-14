@@ -30,6 +30,14 @@
     padding-right: 24px;
   }
 }
+.page-eiv {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.content-eiv {
+  flex-grow: 1;
+}
 .navpage {
   padding: 100px 0;
   h1 {

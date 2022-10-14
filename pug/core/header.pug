@@ -1,5 +1,40 @@
-// header
-header#headerSticky.header
-  .wrapper 
-    | header
-//	/header
+// header-eiv
+header.header-eiv
+  .wrapper-grid  
+    .header-eiv__container 
+      .header-eiv__burger 
+        .header-eiv__burger-inner 
+      a(href="#").header-eiv__logo 
+        img(src="img/logo.png", alt="")
+      nav.header-eiv__menu   
+        ul 
+          li 
+            a(href="#") О ЦЕНТРЕ
+          li 
+            a(href="#") Поддержка Бизнеса
+          li 
+            a(href="#") Идеи
+          li 
+            a(href="#") Старт
+          li 
+            a(href="#") Налоги
+          li 
+            a(href="#") Деньги
+          li 
+            a(href="#") Продвижение и сбыт
+          li.header-eiv__points 
+            a(href="#")
+              svg(class="icon-points")
+                use(xlink:href="img/sprite.svg#points")
+      .header-eiv__user 
+        .header-eiv__icon 
+          svg(class="icon-tel")
+            use(xlink:href="img/sprite.svg#tel")
+        .header-eiv__icon 
+          svg(class="icon-search")
+            use(xlink:href="img/sprite.svg#search")
+        .header-eiv__icon 
+          svg(class="icon-user")
+            use(xlink:href="img/sprite.svg#user")
+        .header-eiv__btn Подать заявку
+//	/header-eiv

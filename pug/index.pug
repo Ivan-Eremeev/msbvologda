@@ -5,13 +5,21 @@ block title
 
 block content
 
-  .navpage 
-    .wrapper-grid 
-      h1 Навигаця по страницам
-      ul 
-        li 
-          //- a(href="template.html") Шаблон
-        li 
-          a(href="landing.html") Лендинг
-        li 
-          a(href="page-nav.html") Страница
+  .page-eiv 
+
+    include core/header.pug
+
+    .content-eiv 
+
+      .navpage 
+        .wrapper-grid 
+          h1 Навигаця по страницам
+          ul 
+            li 
+              //- a(href="template.html") Шаблон
+            li 
+              a(href="landing.html") Лендинг
+            li 
+              a(href="page-nav.html") Страница
+
+    include core/footer.pug
