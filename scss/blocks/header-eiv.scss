@@ -246,6 +246,8 @@
     }
   }
   @media (max-width: $break_xl) {
+    height: 80px;
+    padding: 6px 0;
     &__menu {
       display: none;
     }

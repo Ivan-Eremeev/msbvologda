@@ -81,4 +81,26 @@ window.onload = function () {
   dropBlock($('.js-drop-btn'));
   dropBlock($('.js-drop-menu'), true);
 
+  // Waslidemenu | Мобильное меню
+  // $('.mobile-menu__nav').waSlideMenu({
+  //   backOnTop: true,
+  //   backLinkContent: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //   <path d="M46.625 22.4999H7.50862L16.5081 13.5004L14.3869 11.3791L1.76596 24L14.3869 36.6209L16.5081 34.4996L7.50843 25.4999H46.625V22.4999V22.4999Z" fill="#999"/>
+  //   </svg>`,
+  //   slideSpeed: 300,
+  //   autoHeightMenu: true,
+  // });
+
+  // $('.mobile-menu__contact').waSlideMenu({
+  //   backOnTop: true,
+  //   backLinkContent: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //   <path d="M46.625 22.4999H7.50862L16.5081 13.5004L14.3869 11.3791L1.76596 24L14.3869 36.6209L16.5081 34.4996L7.50843 25.4999H46.625V22.4999V22.4999Z" fill="#999"/>
+  //   </svg>`,
+  //   slideSpeed: 300,
+  //   autoHeightMenu: true,
+  // });
+
+  const slinky = $('.mobile-menu__nav').slinky();
+  const slinky2 = $('#mobileMenuTel').slinky();
+
 }
