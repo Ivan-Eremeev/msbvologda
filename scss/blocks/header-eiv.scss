@@ -294,7 +294,6 @@
   }
   @media (max-width: $break_sm) {
     height: 54px;
-    background-color: $blue;
     &__logo {
       max-width: 40px;
     }
@@ -304,14 +303,8 @@
     &__burger {
       margin-right: 20px;
     }
-    &__burger-inner {
-      &:after, &:before {
-        background-color: #fff;
-      }
-    }
     &__icon {
       padding: 0 15px;
-      fill: #fff;
     }
   }
 }

@@ -530,7 +530,6 @@ body.lock {
 @media (max-width: 768px) {
   .header-eiv {
     height: 54px;
-    background-color: #444DA0;
   }
   .header-eiv__logo {
     max-width: 40px;
@@ -541,12 +540,8 @@ body.lock {
   .header-eiv__burger {
     margin-right: 20px;
   }
-  .header-eiv__burger-inner:after, .header-eiv__burger-inner:before {
-    background-color: #fff;
-  }
   .header-eiv__icon {
     padding: 0 15px;
-    fill: #fff;
   }
 }
 
