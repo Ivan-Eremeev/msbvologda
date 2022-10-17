@@ -714,9 +714,6 @@ body.lock {
   width: 100%;
 }
 .mobile-menu .back:before {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
   opacity: 0.4;
 }
 .mobile-menu .next:after {
@@ -987,6 +984,8 @@ body.lock {
 .page-nav__sidebar {
   width: 300px;
   margin-right: 48px;
+}
+.page-nav__links {
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   font-size: 14px;

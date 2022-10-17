@@ -100,7 +100,16 @@ window.onload = function () {
   //   autoHeightMenu: true,
   // });
 
+  // slinky | Мобильное меню
   const slinky = $('.mobile-menu__nav').slinky();
   const slinky2 = $('#mobileMenuTel').slinky();
+
+  // Sticky Sidebar | Прилипающий сайдбар
+  if ($('#sidebar').length) {
+    const sidebar = new StickySidebar('#sidebar', { 
+      topSpacing: 100,
+      bottomSpacing: 20,
+     });
+  }
 
 }
