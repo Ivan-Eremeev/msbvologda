@@ -9,6 +9,7 @@
   &__sidebar {
     width: 300px;
     margin-right: 48px;
+    flex-shrink: 0;
   }
   &__links {
     border: 1px solid #e5e5e5;
@@ -65,6 +66,7 @@
     a {
       font-size: 21px;
       font-weight: 500;
+      line-height: 1.6;
       color: $black;
       text-decoration: none;
       transition: .1s;

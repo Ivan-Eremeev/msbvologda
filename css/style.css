@@ -979,6 +979,8 @@ body.lock {
 .page-nav__sidebar {
   width: 300px;
   margin-right: 48px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 .page-nav__links {
   border: 1px solid #e5e5e5;
@@ -1040,6 +1042,7 @@ body.lock {
 .page-nav__item a {
   font-size: 21px;
   font-weight: 500;
+  line-height: 1.6;
   color: #000;
   text-decoration: none;
   -webkit-transition: 0.1s;
