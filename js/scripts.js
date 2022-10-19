@@ -96,7 +96,11 @@ window.onload = function () {
   // Swiper | Слайдер
   if ($('#welcomeSlider').length) {
     const welcomeSlider = new Swiper('#welcomeSlider', {
+      effect: 'fade',
       slidesPerView: 1,
+      loop: true,
+      autoplay: true,
+      speed: 2000,
     });
   }
 
