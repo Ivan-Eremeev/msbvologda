@@ -99,8 +99,10 @@ window.onload = function () {
       effect: 'fade',
       slidesPerView: 1,
       loop: true,
-      autoplay: true,
-      speed: 2000,
+      speed: 300,
+      autoplay: {
+        delay: 5000,
+      },
     });
   }
 

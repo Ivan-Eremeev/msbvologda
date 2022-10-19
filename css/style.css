@@ -747,6 +747,10 @@ body.lock {
 .welcome-slider__slider {
   overflow: hidden;
 }
+.welcome-slider__slider .swiper-slide {
+  height: auto;
+  background-color: #fff;
+}
 .welcome-slider__slider .swiper-slide-active .welcome-slider__img {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -770,9 +774,9 @@ body.lock {
   margin-right: 28px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-transform: translate(-1000px);
-  -ms-transform: translate(-1000px);
-  transform: translate(-1000px);
+  -webkit-transform: translate(-1000px, 0);
+  -ms-transform: translate(-1000px, 0);
+  transform: translate(-1000px, 0);
   -webkit-transition: opacity 1s, -webkit-transform 1s ease 0.3s;
   transition: opacity 1s, -webkit-transform 1s ease 0.3s;
   -o-transition: transform 1s ease 0.3s, opacity 1s;
@@ -787,9 +791,9 @@ body.lock {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-transform: translate(1000px);
-  -ms-transform: translate(1000px);
-  transform: translate(1000px);
+  -webkit-transform: translate(1000px, 0);
+  -ms-transform: translate(1000px, 0);
+  transform: translate(1000px, 0);
   -webkit-transition: opacity 1s, -webkit-transform 1s ease 0.3s;
   transition: opacity 1s, -webkit-transform 1s ease 0.3s;
   -o-transition: transform 1s ease 0.3s, opacity 1s;

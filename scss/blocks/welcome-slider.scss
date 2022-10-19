@@ -6,6 +6,10 @@
   color: $black;
   &__slider {
     overflow: hidden;
+    .swiper-slide {
+      height: auto;
+      background-color: #fff;
+    }
     .swiper-slide-active {
       .welcome-slider__img {
         transform: translate(0,0);
@@ -25,7 +29,7 @@
     width: 50%;
     margin-right: 28px;
     flex-shrink: 0;
-    transform: translate(-1000px,);
+    transform: translate(-1000px, 0);
     transition: transform 1s ease 0.3s, opacity 1s;
     opacity: 0;
     img {
@@ -34,7 +38,7 @@
   }
   &__content {
     flex-grow: 1;
-    transform: translate(1000px, );
+    transform: translate(1000px, 0);
     transition: transform 1s ease 0.3s, opacity 1s;
     opacity: 0;
   }
@@ -107,7 +111,16 @@
       margin-top: 30px;
       margin-left: auto;
       margin-right: auto;
+      // transform: translate(0, 100px);
+      // transition: transform 1s ease 0.3s, opacity 1s;
     }
+    // &__slider {
+    //   .swiper-slide-active {
+    //     .welcome-slider__btn {
+    //       transform: translate(0,0);
+    //     }
+    //   }
+    // }
   }
   @media (max-width: $break_xs) {
     &__btn {
