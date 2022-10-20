@@ -112,7 +112,7 @@
       background-color: #fff;
       border: 1px solid $gray;
       opacity: 1;
-      transition: .5s transform;
+      transition: .3s transform;
       transform: scale(0.8);
       &:hover {
         background-color: $blue;
@@ -134,7 +134,7 @@
     border-radius: 4px;
     position: static;
     margin-top: 0;
-    transition: .5s;
+    transition: .3s;
     &:after {
       font-size: 12px;
       font-weight: bold;

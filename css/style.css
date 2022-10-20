@@ -896,11 +896,11 @@ body.lock {
   background-color: #fff;
   border: 1px solid #636161;
   opacity: 1;
-  -webkit-transition: 0.5s -webkit-transform;
-  transition: 0.5s -webkit-transform;
-  -o-transition: 0.5s transform;
-  transition: 0.5s transform;
-  transition: 0.5s transform, 0.5s -webkit-transform;
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  -o-transition: 0.3s transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
@@ -927,9 +927,9 @@ body.lock {
   border-radius: 4px;
   position: static;
   margin-top: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .welcome-slider__arrow:after {
   font-size: 12px;
