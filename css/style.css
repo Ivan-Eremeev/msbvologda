@@ -222,7 +222,7 @@ body.lock {
   height: 35px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-right: 90px;
+  margin-right: 20px;
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
@@ -281,7 +281,7 @@ body.lock {
 }
 .header-eiv__menu {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 19px;
   font-weight: bold;
 }
@@ -292,11 +292,11 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -28px;
-  margin-right: -28px;
+  margin-left: -25px;
+  margin-right: -25px;
 }
 .header-eiv__menu > ul li {
-  margin: 0 28px;
+  margin: 0 25px;
   position: relative;
 }
 .header-eiv__menu > ul li:hover > .header-eiv__dropmenu {

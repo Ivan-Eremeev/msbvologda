@@ -18,7 +18,7 @@
     width: 35px;
     height: 35px;
     flex-shrink: 0;
-    margin-right: 90px;
+    margin-right: 20px;
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -67,16 +67,16 @@
   }
   &__menu {
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 19px;
     font-weight: bold;
     > ul {
       display: flex;
       align-items: center;
-      margin-left: -28px;
-      margin-right: -28px;
+      margin-left: -25px;
+      margin-right: -25px;
       li {
-        margin: 0 28px;
+        margin: 0 25px;
         position: relative;
         &:hover {
           > .header-eiv__dropmenu {
