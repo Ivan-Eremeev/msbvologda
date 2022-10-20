@@ -890,6 +890,7 @@ body.lock {
   width: auto !important;
   margin-right: 20px;
   position: static;
+  z-index: 2;
 }
 .welcome-slider__pagination .swiper-pagination-bullet {
   display: -webkit-box;
@@ -941,6 +942,7 @@ body.lock {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  z-index: 2;
 }
 .welcome-slider__arrow:after {
   font-size: 12px;

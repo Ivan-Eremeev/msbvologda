@@ -106,6 +106,7 @@
     width: auto !important;
     margin-right: 20px;
     position: static;
+    z-index: 2;
     .swiper-pagination-bullet {
       display: flex;
       justify-content: center;
@@ -139,6 +140,7 @@
     position: static;
     margin-top: 0;
     transition: .3s;
+    z-index: 2;
     &:after {
       font-size: 12px;
       font-weight: bold;
