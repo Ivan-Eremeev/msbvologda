@@ -98,12 +98,41 @@ window.onload = function () {
     const welcomeSlider = new Swiper('#welcomeSlider', {
       effect: 'fade',
       slidesPerView: 1,
-      loop: true,
       speed: 300,
+      loop: true,
       autoplay: {
         delay: 7000,
       },
+      pagination: {
+        el: '.welcome-slider__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.welcome-slider__arrow--next',
+        prevEl: '.welcome-slider__arrow--prev',
+      },
+      on: {
+        init: function () {
+          playVideo();
+        },
+        transitionEnd: function () {
+          playVideo();
+        },
+      },
     });
+
+    // Ленивая загрузка и запуск видео в слайдере
+    function playVideo() {
+      let slide = $('#welcomeSlider .swiper-slide-active');
+      let video = slide.find('.lazySlider');
+      if (video.length && !slide.hasClass('swiper-slide-duplicate')) {
+        video.find('source').attr('src', video.find('source').data('src'));
+        video.removeClass('lazySlider');
+        setTimeout(() => {
+          video[0].load();
+        }, 1500);
+      }
+    }
   }
 
 }

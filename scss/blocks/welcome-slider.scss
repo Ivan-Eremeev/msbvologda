@@ -35,12 +35,22 @@
     img {
       width: 100%;
     }
+    video {
+      width: 100%;
+    }
+    &--reverse {
+      margin-left: 28px;
+      transform: translate(1000px, 0);
+    }
   }
   &__content {
     flex-grow: 1;
     transform: translate(1000px, 0);
     transition: transform 1s ease 0.3s, opacity 1s;
     opacity: 0;
+    &--reverse {
+      transform: translate(-1000px, 0);
+    }
   }
   &__sub {
     font-size: 15px;
@@ -80,6 +90,66 @@
       color: #fff;
     }
   }
+  &__controlls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  &__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto !important;
+    margin-right: 20px;
+    position: static;
+    .swiper-pagination-bullet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 12px;
+      height: 12px;
+      margin: 7px !important;
+      background-color: #fff;
+      border: 1px solid $gray;
+      opacity: 1;
+      transition: .5s transform;
+      transform: scale(0.8);
+      &:hover {
+        background-color: $blue;
+        border-color: $blue;
+        transform: scale(1);
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $blue;
+      border-color: $blue;
+      transform: scale(1);
+    }
+  }
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    background-color: #444;
+    border-radius: 4px;
+    position: static;
+    margin-top: 0;
+    transition: .5s;
+    &:after {
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+    }
+    &--prev {
+      
+    }   
+    &--next {
+
+    }
+    &:hover {
+      background-color: $blue;
+    }
+  }
   @media (max-width: $break_xl) {
     &__title {
       font-size: 60px;
@@ -100,27 +170,30 @@
     padding: 20px 0 60px;
     &__container {
       flex-wrap: wrap;
+      height: 100%;
     }
     &__img {
       width: 100%;
+      margin-left: 0;
       margin-right: 0;
+      margin-bottom: 20px;
       order: 1;
     }
     &__btn {
       order: 2;
-      margin-top: 30px;
+      margin-top: auto;
       margin-left: auto;
       margin-right: auto;
-      // transform: translate(0, 100px);
-      // transition: transform 1s ease 0.3s, opacity 1s;
     }
-    // &__slider {
-    //   .swiper-slide-active {
-    //     .welcome-slider__btn {
-    //       transform: translate(0,0);
-    //     }
-    //   }
-    // }
+    &__controlls {
+      justify-content: center;
+    }
+    &__pagination {
+      margin-right: 0;
+    }
+    &__arrow {
+      display: none;
+    }
   }
   @media (max-width: $break_xs) {
     &__btn {

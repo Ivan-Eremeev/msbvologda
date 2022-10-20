@@ -20,7 +20,8 @@ block content
                 .swiper-slide 
                   .welcome-slider__container 
                     .welcome-slider__img 
-                      img(src="img/slider1.png", alt="")
+                      video(autoplay playsinline muted preload="auto" poster="img/img8.png").lazySlider
+                        source(data-src="video/4f.mp4" type="video/mp4")
                     .welcome-slider__content 
                       .welcome-slider__sub Что нужно знать для старта?
                       .welcome-slider__title Быстрый старт вашего бизнеса
@@ -29,24 +30,29 @@ block content
                     a(href="#").welcome-slider__btn.tablet-visible Узнать подробнее
                 .swiper-slide 
                   .welcome-slider__container 
-                    .welcome-slider__img 
-                      img(src="img/slider2.png", alt="")
-                    .welcome-slider__content 
-                      .welcome-slider__sub Что нужно знать для старта?
+                    .welcome-slider__content.welcome-slider__content--reverse 
+                      .welcome-slider__sub Программа государственной поддержки
                       .welcome-slider__title Поддержка бизнеса
-                      .welcome-slider__text Всё что Вам нужно знать для открытия Вашего бизнеса - от выбора организационно-правовой формы до выбора налогообложения, необходимые документы, лицензии, разрешения, ответы на эти вопросы Вы найдете в этом разделе!
+                      .welcome-slider__text Рассказываем, какие существуют государственные программы, как ими воспользоваться. Разбираем типичные вопросы и даем рекомендации. Подписывайтесь на рассылку, чтобы быть в курсе!
                       a(href="#").welcome-slider__btn.tablet-hide Узнать подробнее
+                    .welcome-slider__img.welcome-slider__img--reverse 
+                      img(src="img/slider2.png", alt="")
                     a(href="#").welcome-slider__btn.tablet-visible Узнать подробнее
                 .swiper-slide 
                   .welcome-slider__container 
                     .welcome-slider__img 
-                      img(src="img/slider3.png", alt="")
+                      video(autoplay playsinline muted preload="auto" poster="img/img2.png").lazySlider
+                        source(data-src="video/1f.mp4" type="video/mp4")
                     .welcome-slider__content 
-                      .welcome-slider__sub Что нужно знать для старта?
+                      .welcome-slider__sub Всё начинается с идеи!
                       .welcome-slider__title Идеи для бизнеса
-                      .welcome-slider__text Всё что Вам нужно знать для открытия Вашего бизнеса - от выбора организационно-правовой формы до выбора налогообложения, необходимые документы, лицензии, разрешения, ответы на эти вопросы Вы найдете в этом разделе!
+                      .welcome-slider__text Делимся готовыми решениями и четкими инструкциями, в разных областях бизнеса!
                       a(href="#").welcome-slider__btn.tablet-hide Узнать подробнее
                     a(href="#").welcome-slider__btn.tablet-visible Узнать подробнее
+              .welcome-slider__controlls 
+                .welcome-slider__pagination.swiper-pagination
+                .welcome-slider__arrow.welcome-slider__arrow--prev.swiper-button-prev
+                .welcome-slider__arrow.welcome-slider__arrow--next.swiper-button-next
       // /welcome-slider
 
       // steps-eiv over
