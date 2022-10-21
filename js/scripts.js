@@ -125,9 +125,8 @@ window.onload = function () {
     function playVideo() {
       let slide = $('#welcomeSlider .swiper-slide-active');
       let video = slide.find('.lazySlider');
-      if (video.length && !slide.hasClass('swiper-slide-duplicate')) {
+      if (video.length) {
         video.find('source').attr('src', video.find('source').data('src'));
-        video.removeClass('lazySlider');
         setTimeout(() => {
           video[0].load();
         }, 1500);
